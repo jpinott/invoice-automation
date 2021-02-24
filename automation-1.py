@@ -13,11 +13,11 @@ def b64_topdf(b64text):
     f.write(bytes)
     f.close()
 
-
 # getting text file with email contents, extracting only base64 text & calling conversion function
 with open('/Users/julianny.pinottvel/Downloads/pdf2base64', 'r') as file:
     data = file.read().replace('\n', '')
-regex = r"(?s)(Content-Transfer-Encoding: base64)(.*==)"
+
+regex = r"(?s)(Content-Transfer-Encoding: base64)([^-]*)"
 result = re.search(regex, data)
 convertible = result.group(2)
 b64_topdf(convertible)
