@@ -47,7 +47,7 @@ def lambda_handler(event, context):
 		<head></head>
 		<body>
 		<h1>Hello!</h1>
-		<p>Please see the attached file for a list of customers to contact.</p>
+		<p>Please see the attached file for the soon-to-be routed PDF.</p>
 		</body>
 		</html>
 		"""
